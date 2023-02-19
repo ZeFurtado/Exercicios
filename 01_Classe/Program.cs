@@ -1,17 +1,29 @@
-﻿namespace _01_Classe 
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _01_Classe 
 {
-    class Pessoa
+    class Program
     {
-        string Nome;
-        string Sexo;
-        DateTime DataNascimento;
-
-
-        public string ResumoPessoa() 
+        public static void Main(string[] args) 
         {
-            string ResumoPessoa = $"Nome: {Nome}";
+            Pessoa pessoa = new Pessoa();
 
-            return ResumoPessoa;
+            Console.WriteLine("Nome");
+            pessoa.Nome = Console.ReadLine();
+
+            Console.WriteLine("Sexo");
+            pessoa.Sexo = Console.ReadLine();
+
+            pessoa.DataNascimento = new DateTime(2000,11,18);
+
+
+            Console.WriteLine(pessoa.ResumoPessoa());
+            Console.ReadKey();
+
         }
     }
 }
